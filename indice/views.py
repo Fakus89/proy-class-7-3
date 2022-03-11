@@ -47,7 +47,19 @@ def mi_plantilla(request):
         "len_nombre": len(nombre),
         "lista":lista
     }
-    template=loader.get_template("mi_plantilla.html") 
-    plantilla_preparada= template.render(diccionario_de_datos)
-    return HttpResponse(plantilla_preparada)
+    #version con open
+    #Plantilla = open(r("C:\Users\Facundo Nieves\Desktop\Coder\proyecto2\indice\plantilla\mi_plantilla.html"))
+    #template = Template(plantilla.read())
+    #plantilla.close()
+    #context= Context(diccionario_de_datos)
+    #plantilla_preparada= template.remder(diccionario_de_datos)
+
+    #version con loader
+    #template=loader.get_template("mi_plantilla.html") 
+    #plantilla_preparada= template.render(diccionario_de_datos)
+    #return HttpResponse(plantilla_preparada)
+
+    #vercion con render(from django.shortcuts import render)
+    return render(request,"mi_plantilla.html", diccionario_de_datos)
+
 
