@@ -4,7 +4,7 @@ from .views import inicio,otra_vista,numero_random,numero_usuario,anio_edad,mi_p
 urlpatterns = [
     
     path("",inicio),
-    path("inicio/",otra_vista),
+    path("otra_vista/",otra_vista),
     path("edad/<numero>",anio_edad),
     path("mi_plantilla/",mi_plantilla),
     path("dame-numero/<int:numero>",numero_usuario),

@@ -8,7 +8,7 @@ import random
 from django.template import Context, Template, loader
 
 def inicio(request):
-    return HttpResponse("hola soy una pagina")
+    return render(request,"indice/index.html", {})
 
 def otra_vista(request):
     return HttpResponse("""
@@ -60,6 +60,6 @@ def mi_plantilla(request):
     #return HttpResponse(plantilla_preparada)
 
     #vercion con render(from django.shortcuts import render)
-    return render(request,"mi_plantilla.html", diccionario_de_datos)
+    return render(request,"indice/mi_plantilla.html", diccionario_de_datos)
 
 
