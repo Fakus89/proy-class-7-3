@@ -11313,10 +11313,10 @@ header.masthead:before {
   position: absolute;
   background-color: #1c375e;
   height: 100%;
-  width: 100%;
+  width: 0%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
@@ -11369,10 +11369,10 @@ header.masthead h1, header.masthead .h1 {
   position: absolute;
   background-color: #1c375e;
   height: 100%;
-  width: 45%;
+  width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 footer.footer {

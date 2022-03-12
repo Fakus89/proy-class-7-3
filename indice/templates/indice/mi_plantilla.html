@@ -7,20 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    Mi plantilla vacia!!!
-    {% if len_nombre < 5 %}
-        <p Style="color: red;">{{nombre}}</p>
-        <p Style="color: blue;">{{apellido}}</p>
-    {% elif len_nombre == 5 %}
-        <p Style="color: blue;">{{nombre}}</p>
-        <p Style="color: red;">{{apellido}}</p>
-    {% else %}
-        <p Style="color: green;">{{nombre}}</p>
-        <p Style="color: green;">{{apellido}}</p>
-    {% endif %}
+    {% extends 'indice/index.html' %}
+    
+    {% block bloque_head %}
+        <title>Mi plantilla</title>
+    {% endblock bloque_head %}
 
-    {% for  valor in lista %}
-    <p Style="color: green;">{{valor}}</p>
-    {% endfor %}
+
+    {% block pruebatemplate%}
+            
+        Mi plantilla vacia!!!
+        {% if len_nombre < 5 %}
+            <p Style="color: red;">{{nombre}}</p>
+            <p Style="color: blue;">{{apellido}}</p>
+        {% elif len_nombre == 5 %}
+            <p Style="color: blue;">{{nombre}}</p>
+            <p Style="color: red;">{{apellido}}</p>
+        {% else %}
+            <p Style="color: green;">{{nombre}}</p>
+            <p Style="color: green;">{{apellido}}</p>
+        {% endif %}
+
+        {% for  valor in lista %}
+            <p Style="color: green;">{{valor}}</p>
+        {% endfor %}
+    {% endblock pruebatemplate %}
 </body>
 </html>
